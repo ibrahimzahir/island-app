@@ -26,8 +26,8 @@
                       4h4v-4h-4M4 8h4V4H4v4z"></path>
                                         </svg>
                                     </span>
-                                    <a href="#">
-                                        <span class="ml-2">Dashboard</span>
+                                    <a href="/population">
+                                        <span class="ml-2">Population</span>
                                     </a>
                                 </li>
                                 <li
@@ -43,7 +43,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <a href="#">
+                                    <a href="/population">
 
                                         <span class="ml-2">Companies</span>
                                     </a>
