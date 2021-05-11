@@ -1,6 +1,6 @@
 <div>
     <x-slot name="header">
-        <h2 class="text-center">Laravel 8 Livewire CRUD Demo</h2>
+        <h2 class="text-center font-bold text-lg">Population</h2>
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -15,8 +15,8 @@
         </div>
     </div>
     @endif --}}
-    <button wire:click="create()" class="bg-green-700 text-white font-bold py-2 px-4 rounded my-3">Create
-        Student</button>
+    <button wire:click="create()" class="bg-black text-white font-bold py-2 px-4 rounded my-3">Add
+        Person</button>
     {{-- @if($isModalOpen)
                 @include('livewire.create')
                 @endif --}}
@@ -25,7 +25,7 @@
             <tr class="bg-gray-100">
                 <th class="px-4 py-2 w-20">No.</th>
                 <th class="px-4 py-2">Name</th>
-                <th class="px-4 py-2">Email</th>
+                <th class="px-4 py-2">National ID</th>
                 <th class="px-4 py-2">Mobile</th>
                 <th class="px-4 py-2">Action</th>
             </tr>
@@ -35,11 +35,13 @@
             <tr>
                 <td class="border px-4 py-2">{{ $population->id }}</td>
                 <td class="border px-4 py-2">{{ $population->firstname }}</td>
-                <td class="border px-4 py-2">{{ $population->email}}</td>
+                <td class="border px-4 py-2">{{ $population->nationalID}}</td>
                 <td class="border px-4 py-2">{{ $population->mobile}}</td>
                 <td class="border px-4 py-2">
                     <button wire:click="edit({{ $population->id }})"
                         class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Edit</button>
+                    <button wire:click="delete({{ $population->id }})"
+                        class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">View</button>
                     <button wire:click="delete({{ $population->id }})"
                         class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
                 </td>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use DB;
 use Livewire\Component;
 use App\Models\Population;
 
@@ -12,7 +13,8 @@ class Populations extends Component
 
     public function render()
     {   
-       $this->populations=Population::all();
+    $this->populations=Population::all();
+      
        
        return view('livewire.population');
     }
